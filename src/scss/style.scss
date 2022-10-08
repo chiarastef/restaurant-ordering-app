@@ -1,0 +1,228 @@
+// Google Font
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&family=Smythe&display=swap");
+
+// Variables
+@import "variables";
+
+// Reset
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// Mixin
+@mixin btn {
+  width: 100%;
+  font-size: map-get($small-text, "mobile");
+  font-weight: 700;
+  color: #ffffff;
+  background-color: $btn-background;
+  border: none;
+  border-radius: 3px;
+  padding: 18px;
+  margin-top: 50px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+@mixin flex-center-aligned {
+  display: flex;
+  align-items: center;
+}
+
+body {
+  font-family: $main-font;
+}
+
+// Header
+header {
+  max-width: 600px;
+  margin: auto;
+  background-image: url(../img/burger-bg.png);
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: cover;
+  color: #ffffff;
+
+  .overlay {
+    background: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    padding: 38px 45px 57px;
+  }
+
+  h1 {
+    font-size: 39px;
+    font-weight: normal;
+    margin-bottom: 3px;
+  }
+
+  h2 {
+    font-size: 22px;
+    font-weight: normal;
+  }
+}
+
+// Main
+.container {
+  max-width: 450px;
+  padding: 15px;
+  margin: auto;
+}
+
+// Menu
+.menu {
+  margin: 50px 0 45px;
+
+  &-item {
+    display: flex;
+    width: 100%;
+    margin-top: 30px;
+
+    &-icon {
+      font-size: 60px;
+      width: 95px;
+      text-align: center;
+    }
+
+    &-info {
+      margin-top: 10px;
+
+      .item-title {
+        font-size: map-get($primary-text, "mobile");
+      }
+
+      .item-ingredients {
+        color: $light-text;
+        font-size: map-get($small-text, "mobile");
+        margin-top: 3px;
+      }
+
+      .item-price {
+        font-size: map-get($secondary-text, "mobile");
+        margin-top: 6px;
+      }
+    }
+
+    &-add-btn {
+      width: 40px;
+      height: 40px;
+      font-family: $secondary-font;
+      font-size: 32px;
+      font-weight: 200;
+      line-height: 100%;
+      color: #3c3c3c;
+      background-color: #ffffff;
+      border: $border;
+      border-radius: 50%;
+      margin-left: auto;
+      margin-top: 10px;
+    }
+  }
+
+  hr {
+    border: $border;
+    margin-top: 40px;
+  }
+}
+
+// Cart
+.cart {
+  h3 {
+    text-align: center;
+    font-size: map-get($primary-text, "mobile");
+    font-weight: normal;
+    margin-bottom: 60px;
+  }
+
+  &-item {
+    @include flex-center-aligned;
+    margin-bottom: 20px;
+  }
+
+  &-item-name {
+    font-size: map-get($primary-text, "mobile");
+  }
+
+  &-remove {
+    font-family: $secondary-font;
+    color: $light-text;
+    font-size: 12px;
+    margin-left: 10px;
+  }
+
+  &-item-price,
+  &-total-amount {
+    font-size: map-get($secondary-text, "mobile");
+    margin-left: auto;
+  }
+
+  hr {
+    margin-bottom: 15px;
+  }
+
+  &-total {
+    @include flex-center-aligned;
+    font-size: map-get($primary-text, "mobile");
+  }
+
+  button {
+    @include btn;
+    margin-top: 50px;
+  }
+}
+
+// Pay form
+.pay-form {
+  display: none;
+  width: 90%;
+  height: fit-content;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  font-family: $secondary-font;
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 4px;
+  margin: auto;
+  filter: drop-shadow(5.18654px 5.18654px 255.437px rgba(0, 0, 0, 0.5));
+
+  h3 {
+    font-size: map-get($secondary-text, "mobile");
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  input {
+    display: block;
+    width: 100%;
+    font-size: map-get($small-text, "mobile");
+    padding: 15px;
+    border: $border;
+    border-radius: 4px;
+    margin-bottom: 15px;
+  }
+
+  button {
+    @include btn;
+    margin-top: 30px;
+  }
+}
+
+// Order confirmation sectionW
+.order-confirmation {
+  display: none;
+  font-size: map-get($secondary-text, "mobile");
+  text-align: center;
+  color: #065f46;
+  background-color: #ecfdf5;
+  padding: 20px;
+}
+
+// Media queries
+@media screen and (min-width: 576px) {
+  header .overlay {
+    background: rgba(0, 0, 0, 0.2);
+  }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Ordering App</title>
+  </head>
+  <body>
+    <header>
+      <div class="overlay">
+        <h1>Jimmy's Diner</h1>
+        <h2>The best burgers and pizzas in town.</h2>
+      </div>
+    </header>
+    <div class="container">
+      <section class="menu" id="menu"></section>
+      <section class="cart" id="cart"></section>
+      <section class="pay-form" id="pay-form">
+        <h3>Enter your card details</h3>
+        <form>
+          <input
+            type="text"
+            placeholder="Enter your name"
+            id="user-name"
+            required
+          />
+          <input type="number" placeholder="Enter card number" required />
+          <input type="number" placeholder="Enter CVV" required />
+          <button type="submit" id="pay-btn">Pay</button>
+        </form>
+      </section>
+      <section class="order-confirmation" id="order-confirmation"></section>
+    </div>
+  </body>
+</html>

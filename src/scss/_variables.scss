@@ -1,0 +1,24 @@
+// Fonts
+$main-font: "Smythe", cursive;
+$secondary-font: "Inter", sans-serif;
+
+// Colors
+$btn-background: #16db99;
+$light-text: #8b8b8b;
+
+// Font sizes
+$primary-text: (
+  "mobile": 25px,
+  "desktop": 28px,
+);
+$small-text: (
+  "mobile": 14px,
+  "desktop": 16px,
+);
+$secondary-text: (
+  "mobile": 18px,
+  "desktop": 20px,
+);
+
+// Border
+$border: 1px solid #dedede;
