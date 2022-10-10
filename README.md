@@ -8,6 +8,8 @@ This is the solo project from the Essential JavaScript concepts course on the co
 
 ## Screenshots
 
+<img src="./screenshots/restaurant-ordering-app-preview.png" alt="Book finder website preview" width="40%"> <img src="./screenshots/restaurant-ordering-app-pay-form-preview.png" alt="Book finder website preview with search results" width="50%">
+
 ## Project
 
 Users should be able to:
