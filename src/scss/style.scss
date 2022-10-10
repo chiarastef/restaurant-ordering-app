@@ -213,7 +213,7 @@ header {
   }
 }
 
-// Order confirmation sectionW
+// Order confirmation section
 .order-confirmation {
   display: none;
   font-size: map-get($secondary-text, "mobile");
@@ -227,5 +227,53 @@ header {
 @media screen and (min-width: 576px) {
   header .overlay {
     background: rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  // Menu
+  .menu .menu-item {
+    .menu-item-info {
+      .item-title {
+        font-size: map-get($primary-text, "desktop");
+      }
+
+      .item-ingredients {
+        font-size: map-get($small-text, "desktop");
+      }
+
+      .item-price {
+        font-size: map-get($secondary-text, "desktop");
+      }
+    }
+
+    .menu-item-add-btn {
+      width: 45px;
+      height: 45px;
+    }
+  }
+
+  // Cart
+  .cart {
+    h3 {
+      font-size: map-get($primary-text, "desktop");
+    }
+
+    &-item-name,
+    &-total {
+      font-size: map-get($primary-text, "desktop");
+    }
+
+    &-item-price,
+    &-total-amount {
+      font-size: map-get($secondary-text, "desktop");
+      margin-left: auto;
+    }
+  }
+
+  // Order confirmation section
+  .order-confirmation {
+    font-size: map-get($secondary-text, "desktop");
+    padding: 25px;
   }
 }

@@ -47,9 +47,11 @@ export function renderCart(menu, itemId) {
     }
   });
 
-  // When user clicks confirm button, the form is shown
+  // When user clicks confirm button, the form is shown (only if there's something in the cart)
   document.getElementById("confirm-btn").addEventListener("click", function () {
-    document.getElementById("pay-form").style.display = "block";
+    if (cart.length > 0) {
+      document.getElementById("pay-form").style.display = "block";
+    }
   });
 }
 
