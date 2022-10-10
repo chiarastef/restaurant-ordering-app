@@ -7,7 +7,7 @@ export function renderMenu(menu) {
           <div class="menu-item-icon">${item.emoji}</div>
           <div class="menu-item-info">
             <div class="item-title">${item.name}</div>
-            <div class="item-ingredients">${item.ingredients}</div>
+            <div class="item-ingredients">${item.ingredients.join(", ")}</div>
             <div class="item-price">$${item.price}</div>
           </div>
           <button class="menu-item-add-btn" id="${item.id}">+</button>

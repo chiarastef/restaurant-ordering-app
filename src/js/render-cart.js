@@ -34,10 +34,10 @@ export function renderCart(menu, itemId) {
     // Delete element only if 'remove' is clicked
     if (menuItemId >= 0 && menuItemId < menu.length) {
       // Delete element from cart array
-      cart.splice(cart.indexOf(e.target.id), 1);
+      cart.splice(cart.indexOf(menuItemId), 1);
 
       // Subtract price from total price
-      cartTotal -= menu[e.target.id].price;
+      cartTotal -= menu[menuItemId].price;
 
       // Clean cart list
       document.getElementById("cart-items").innerHTML = "";

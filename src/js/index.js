@@ -6,7 +6,7 @@ import { renderCart } from "./render-cart";
 
 const menuEl = document.getElementById("menu");
 const cart = document.getElementById("cart");
-const payBtn = document.getElementById("pay-btn");
+const formEl = document.getElementById("form-el");
 const payForm = document.getElementById("pay-form");
 const orderConfirm = document.getElementById("order-confirmation");
 const userName = document.getElementById("user-name");
@@ -27,7 +27,7 @@ menuEl.addEventListener("click", function (e) {
 });
 
 // Render thank you text after filling up form to pay
-payBtn.addEventListener("click", function (e) {
+formEl.addEventListener("submit", function (e) {
   e.preventDefault();
 
   // Hide form to pay
