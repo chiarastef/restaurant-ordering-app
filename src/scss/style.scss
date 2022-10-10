@@ -276,4 +276,16 @@ header {
     font-size: map-get($secondary-text, "desktop");
     padding: 25px;
   }
+
+  .pay-form {
+    max-width: 440px;
+
+    h3 {
+      font-size: map-get($secondary-text, "desktop");
+    }
+
+    input {
+      font-size: map-get($small-text, "desktop");
+    }
+  }
 }
